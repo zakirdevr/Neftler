@@ -1,0 +1,101 @@
+@page "/"
+@using static MyApp.Pages.ProfileIsolation
+<MudContainer >
+   <MudGrid >
+      <MudItem xs="12">
+         <MudPaper Elevation="0" Class="d-flex align-center justify-center mud-width-full py-8" Style="@PicContainerStyle">
+            <MudAvatar Style="@AvatarStyle" Image="images/ProfilePic.png" />
+         </MudPaper>
+      </MudItem>
+   </MudGrid>
+   <MudGrid Style="@GridSpacing">
+      <MudItem xs="12">
+         <MudPaper Elevation="0" Class="d-flex align-center justify-center mud-width-full py-8" Style="@PicContainerStyle">
+            <MudText Typo="Typo.h6" Style="@TextColor">&#64; 650John</MudText>
+         </MudPaper>
+      </MudItem>
+   </MudGrid>
+</MudContainer>
+@* Item 1 *@
+<MudContainer Class="mt-4">
+   <MudPaper Class="d-flex flex-grow-1 gap-4 pa-1" Style="@PaperStyle">
+      <MudIcon Icon="@Icons.Filled.AttachMoney" Class="mt-3 mb-2 ml-3" Size="Size.Small" />
+      <MudNavLink  Href="#" Style="@TextAlign">
+         <MudText  Class="mt-1" >$2050.00</MudText>
+      </MudNavLink>
+      <MudAvatar Class="mt-3 mb-1 mr-3" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Warning">
+         <MudIcon Icon="@Icons.Filled.KeyboardArrowRight"/>
+      </MudAvatar>
+   </MudPaper>
+</MudContainer>
+@* Item 2 *@
+<MudContainer  Class="mt-4">
+   <MudPaper Class="d-flex flex-grow-1 gap-4 pa-1" Style="@PaperStyle">
+      <MudIcon Icon="@Icons.Filled.Person" Class="mt-3 mb-2 ml-3" Size="Size.Small" />
+      <MudNavLink  Href="#" Style="@TextAlign">
+         <MudText  Class="mt-1" >Personal</MudText>
+      </MudNavLink>
+      <MudAvatar Class="mt-3 mb-1 mr-3" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Warning">
+         <MudIcon Icon="@Icons.Filled.KeyboardArrowRight"/>
+      </MudAvatar>
+   </MudPaper>
+</MudContainer>
+@* Item 3 *@
+<MudContainer  Class="mt-4">
+   <MudPaper Class="d-flex flex-grow-1 gap-4 pa-1" Style="@PaperStyle">
+      <MudIcon Icon="@Icons.Filled.Handshake" Class="mt-3 mb-1 ml-3 pt-1" Size="Size.Small" />
+      <MudNavLink  Href="#" Style="@TextAlign">
+         <MudText  Class="mt-1" >Services</MudText>
+      </MudNavLink>
+      <MudAvatar Class="mt-3 mb-1 mr-3" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Warning">
+         <MudIcon Icon="@Icons.Filled.KeyboardArrowRight"/>
+      </MudAvatar>
+   </MudPaper>
+</MudContainer>
+@* Bottom Nav Start *@
+<MudPaper Elevation="3" Width="100%" Height="70px" Class="pl-4 pr-4 pt-2 d-flex " 
+   Style="@BottomContainer">
+   <MudPaper Class="d-flex flex-column" Elevation="0" Width="0px">
+      <MudPaper Elevation="0" Width="0px">
+         <MudIconButton Icon="@Icons.Filled.Home"  Style="@HomeIconStyle"  Edge="Edge.Start"/>
+      </MudPaper>
+      <MudPaper Elevation="0" Width="0px" Style="@HomePaperStyle">
+         <MudText Style="@HomeTextStyle">Home</MudText>
+      </MudPaper>
+   </MudPaper>
+   <MudSpacer />
+   <MudPaper Class="d-flex flex-column" Elevation="0" Width="0px">
+      <MudPaper Elevation="0" Width="0px">
+         <MudIconButton Icon="@Icons.Filled.Movie"  Style="@SeriesIconStyle" Edge="Edge.Start"/>
+      </MudPaper>
+      <MudPaper Elevation="0" Width="0px" Style="@SeriesPaperStyle">
+         <MudText Style="@SeriesTextStyle">Series</MudText>
+      </MudPaper>
+   </MudPaper>
+   <MudSpacer />
+   <MudPaper style="@VideoIcon">
+      <MudIconButton Icon="@Icons.Filled.VideoCall" Style="@VideoIconPosition" Size="Size.Large" />
+   </MudPaper>
+   <MudSpacer />
+   <MudPaper Class="d-flex flex-column" Elevation="0" Width="0px" >
+      <MudPaper Elevation="0" Width="0px">
+         <MudIconButton Style="@ListsIcon"  Icon="@Icons.Filled.ViewList" Color="Color.Inherit" Edge="Edge.Start"/>
+      </MudPaper>
+      <MudPaper Elevation="0" Width="0px" Style="@ListsPaper">
+         <MudText Style="@ListsText">Lists</MudText>
+      </MudPaper>
+   </MudPaper>
+   <MudSpacer />
+   <MudPaper Class="d-flex flex-column" Elevation="0" Width="0px">
+      <MudPaper Elevation="0" Width="0px">
+         <MudIconButton Style="@SearchIcon" Icon="@Icons.Filled.Search" Color="Color.Inherit" />
+      </MudPaper>
+      <MudPaper Elevation="0" Width="0px" Style="@SearchPaper">
+         <MudText Style="@ListsText">Search</MudText>
+      </MudPaper>
+   </MudPaper>
+</MudPaper>
+
+@code{
+
+}

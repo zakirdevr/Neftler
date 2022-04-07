@@ -1,0 +1,132 @@
+﻿@using static MyApp.Shared.NavMenuIsolation
+
+<MudLayout>
+   <MudAppBar Elevation="1" Dense="@dense">
+      <MudIconButton Icon="@LeftIcon" Color="Color.Inherit" Edge="Edge.Start" OnClick="@ToggleDrawer" />
+      <MudSpacer />
+      <MudText Typo="Typo.h5">@Title</MudText>
+         <MudSpacer />
+      <MudIconButton Icon="@RightIcon" Color="Color.Inherit" />
+   </MudAppBar>
+   <MudDrawer Style="@DrawerBgColor" @bind-Open="@open" Width="343px" ClipMode="clipMode" Elevation="1" Variant="@DrawerVariant.Responsive">
+      <MudDrawerHeader Class="mt-5">
+         <MudGrid Spacing="@spacing"  Justify="Justify.SpaceBetween">
+            <MudItem >
+            </MudItem>
+            <MudItem >
+               <MudText Typo="Typo.h6">My App</MudText>
+            </MudItem>
+            <MudItem >
+               <MudAvatar Square="true" Style="@CloseIconStyle" @onclick="@ToggleDrawer">
+                  <MudIcon Icon="@Icons.Filled.Close"  />
+               </MudAvatar>
+            </MudItem>
+         </MudGrid>
+      </MudDrawerHeader>
+      <MudNavMenu>
+         @* Search box Start *@
+         <MudContainer>
+         <MudTextField Style="@SearchBox"  @bind-Value="Search" Placeholder="Search" Variant="Variant.Outlined" 
+            Adornment="Adornment.Start" AdornmentIcon="@Icons.Filled.Search" AdornmentColor="Color.Inherit" />
+         </MudContainer>
+         @* Search box End *@
+         <MudList Clickable="true">
+            <MudContainer  Class="mt-3">
+               <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle">
+                  <MudAvatar Size="Size.Small" Class="ml-4 mt-2" Image="images/navpropic.png" />
+                  <MudNavLink Class="flex-grow-1" Style="@ProfileText" Href="#">Profile</MudNavLink>
+               </MudPaper>
+            </MudContainer>
+            @* Item 1 *@
+            <MudContainer  Class="mt-3">
+               <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle">
+                  <MudNavLink  Href="#" Icon="@Icons.Filled.Assignment">My Plans</MudNavLink>
+                  <MudAvatar Class="mt-2 mr-3" Size="Size.Small" Color="Color.Warning">
+                     <MudText Typo="Typo.button" >10</MudText>
+                  </MudAvatar>
+               </MudPaper>
+            </MudContainer>
+            @* Item 2 *@
+            <MudContainer  Class="mt-3">
+               <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle">
+                  <MudNavLink  Href="#" Icon="@Icons.Filled.Radar">My Goals</MudNavLink>
+                  <MudAvatar Class="mt-2 mr-3" Size="Size.Small" Color="Color.Warning">
+                     <MudText Typo="Typo.button" >2</MudText>
+                  </MudAvatar>
+               </MudPaper>
+            </MudContainer>
+            @* Item 3 *@
+            <MudContainer  Class="mt-3">
+               <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle">
+                  <MudNavLink  Href="#" Icon="@Icons.Filled.AssignmentTurnedIn">My Todos</MudNavLink>
+                  <MudAvatar Class="mt-2 mr-3" Size="Size.Small" Color="Color.Warning">
+                     <MudText Typo="Typo.button" >7</MudText>
+                  </MudAvatar>
+               </MudPaper>
+            </MudContainer>
+            @* Item 4 *@
+            <MudContainer  Class="mt-3">
+               <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle">
+                  <MudNavLink  Href="#" Icon="@Icons.Filled.Movie">My Series</MudNavLink>
+                  <MudAvatar Class="mt-2 mr-3" Size="Size.Small" Color="Color.Warning">
+                     <MudText Typo="Typo.button" >21</MudText>
+                  </MudAvatar>
+               </MudPaper>
+            </MudContainer>
+            @* Item 5 *@
+            <MudContainer  Class="mt-3">
+               <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle">
+                  <MudNavLink  Href="#" Icon="@Icons.Filled.Star">My favourites</MudNavLink>
+                  <MudAvatar Class="mt-2 mr-3" Size="Size.Small" Color="Color.Warning">
+                     <MudText Typo="Typo.button" >25</MudText>
+                  </MudAvatar>
+               </MudPaper>
+            </MudContainer>
+            @* List 1 *@
+            <MudContainer  Class="mt-3">
+               <MudPaper Style="@PaperStyle">
+                  <MudNavGroup Title="List One"  Icon="@Icons.Filled.KeyboardArrowDown" Expanded="false">
+                     <MudNavGroup Title="List Three" Icon="@Icons.Filled.KeyboardArrowDown" Expanded="false">
+                        <MudNavLink Href="/delete" Icon="@Icons.Filled.NoiseControlOff">Item one</MudNavLink>
+                        <MudNavLink Href="/delete" Icon="@Icons.Filled.NoiseControlOff">Item two</MudNavLink>
+                     </MudNavGroup>
+                  </MudNavGroup>
+               </MudPaper>
+            </MudContainer>
+            <MudContainer  Class="mt-3">
+               <MudPaper Style="@PaperStyle">
+                  @* List 2 *@
+                  <MudNavGroup Title="List Two"  Icon="@Icons.Filled.KeyboardArrowDown" Expanded="false">
+                     <MudNavGroup Title="List Three" Icon="@Icons.Filled.KeyboardArrowDown" Expanded="false">
+                        <MudNavLink Href="/delete" Icon="@Icons.Filled.NoiseControlOff">Item one</MudNavLink>
+                        <MudNavLink Href="/delete" Icon="@Icons.Filled.NoiseControlOff">Item two</MudNavLink>
+                     </MudNavGroup>
+                  </MudNavGroup>
+               </MudPaper>
+            </MudContainer>
+         </MudList>
+         <MudContainer Class="ml-3" Style="@ButtonStyle">
+            <MudButton Variant="Variant.Filled" Color="Color.Warning" FullWidth="true" EndIcon="@Icons.Filled.Logout">Logout</MudButton>
+         </MudContainer>
+      </MudNavMenu>
+   </MudDrawer>
+   <MudMainContent Class="pt-16 px-16">
+   </MudMainContent>
+</MudLayout>
+
+@code{
+
+public string  Title {get;set;}="My Profile"; //Will Be Dynamic
+public string  LeftIcon {get;set;}=Icons.Filled.Menu; //Will Be Dynamic
+public string  RightIcon {get;set;}=Icons.Filled.Settings; //Will Be Dynamic
+bool open = true;
+bool dense = false;
+DrawerClipMode clipMode = DrawerClipMode.Never;
+public int spacing { get; set; } = 10;
+public string Search { get; set;}="";
+void ToggleDrawer()
+{
+open = !open;
+}
+
+}
