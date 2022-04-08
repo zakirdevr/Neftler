@@ -16,42 +16,41 @@
       </MudItem>
    </MudGrid>
 </MudContainer>
-@* Item 1 *@
-<MudContainer Class="mt-4">
-   <MudPaper Class="d-flex flex-grow-1 gap-4 pa-1" Style="@PaperStyle">
-      <MudIcon Icon="@Icons.Filled.AttachMoney" Class="mt-3 mb-2 ml-3" Size="Size.Small" />
-      <MudNavLink  Href="#" Style="@TextAlign">
-         <MudText  Class="mt-1" >$2050.00</MudText>
-      </MudNavLink>
-      <MudAvatar Class="mt-3 mb-1 mr-3" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Warning">
-         <MudIcon Icon="@Icons.Filled.KeyboardArrowRight"/>
-      </MudAvatar>
-   </MudPaper>
-</MudContainer>
-@* Item 2 *@
-<MudContainer  Class="mt-4">
-   <MudPaper Class="d-flex flex-grow-1 gap-4 pa-1" Style="@PaperStyle">
-      <MudIcon Icon="@Icons.Filled.Person" Class="mt-3 mb-2 ml-3" Size="Size.Small" />
-      <MudNavLink  Href="#" Style="@TextAlign">
-         <MudText  Class="mt-1" >Personal</MudText>
-      </MudNavLink>
-      <MudAvatar Class="mt-3 mb-1 mr-3" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Warning">
-         <MudIcon Icon="@Icons.Filled.KeyboardArrowRight"/>
-      </MudAvatar>
-   </MudPaper>
-</MudContainer>
-@* Item 3 *@
-<MudContainer  Class="mt-4">
-   <MudPaper Class="d-flex flex-grow-1 gap-4 pa-1" Style="@PaperStyle">
-      <MudIcon Icon="@Icons.Filled.Handshake" Class="mt-3 mb-1 ml-3 pt-1" Size="Size.Small" />
-      <MudNavLink  Href="#" Style="@TextAlign">
-         <MudText  Class="mt-1" >Services</MudText>
-      </MudNavLink>
-      <MudAvatar Class="mt-3 mb-1 mr-3" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Warning">
-         <MudIcon Icon="@Icons.Filled.KeyboardArrowRight"/>
-      </MudAvatar>
-   </MudPaper>
-</MudContainer>
+<MudNavMenu>
+   @* Item 1 *@
+   <MudContainer  Class="mt-4">
+      <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle" Height="45px;">
+         <MudNavLink Match="NavLinkMatch.All" Href="#" Icon="@Icons.Filled.AttachMoney" >
+            $2050.00
+            <MudAvatar Class="mt-2 mr-3" Size="Size.Small" Style="@LinkAvatarStyle" Variant="Variant.Outlined" Color="Color.Warning">
+               <MudText Typo="Typo.button" Style="@ProfileIconStyle"><i class="fa-solid fa-angle-right"></i></MudText>
+            </MudAvatar>
+         </MudNavLink>
+      </MudPaper>
+   </MudContainer>
+   @* Item 2 *@
+   <MudContainer  Class="mt-4">
+      <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle" Height="45px;">
+         <MudNavLink  Match="NavLinkMatch.All" Href="/##" Icon="@Icons.Filled.Person" >
+            Personal
+            <MudAvatar Class="mt-2 mr-3" Size="Size.Small" Style="@LinkAvatarStyle" Variant="Variant.Outlined" Color="Color.Warning">
+               <MudText Typo="Typo.button" Style="@ProfileIconStyle"><i class="fa-solid fa-angle-right"></i></MudText>
+            </MudAvatar>
+         </MudNavLink>
+      </MudPaper>
+   </MudContainer>
+   @* Item 3 *@
+   <MudContainer  Class="mt-4">
+      <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle" Height="45px;">
+         <MudNavLink  Match="NavLinkMatch.All" Href="/###" Icon="@Icons.Filled.Handshake" >
+            Services
+            <MudAvatar Class="mt-2 mr-3" Size="Size.Small" Style="@LinkAvatarStyle" Variant="Variant.Outlined" Color="Color.Warning">
+               <MudText Typo="Typo.button" Style="@ProfileIconStyle"><i class="fa-solid fa-angle-right"></i></MudText>
+            </MudAvatar>
+         </MudNavLink>
+      </MudPaper>
+   </MudContainer>
+</MudNavMenu>
 @* Bottom Nav Start *@
 <MudPaper Elevation="3" Width="100%" Height="70px" Class="pl-4 pr-4 pt-2 d-flex " 
    Style="@BottomContainer">
@@ -95,7 +94,5 @@
       </MudPaper>
    </MudPaper>
 </MudPaper>
-
 @code{
-
 }

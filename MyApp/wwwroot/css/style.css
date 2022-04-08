@@ -1,31 +1,25 @@
 body{
     background-color: #1F1D2B !important;
-}
-
-
-.mud-input.mud-input-outlined:focus-within .mud-input-outlined-border {
+    }
+    .mud-input.mud-input-outlined:focus-within .mud-input-outlined-border {
     border-color: white;    
-}
-
-.mud-icon-root.mud-svg-icon {
+    }
+    .mud-icon-root.mud-svg-icon {
     fill: #D3D3D3;
-}
-
-.mud-nav-link:hover {
+    }
+    .mud-nav-link:hover {
     color: white;
     background-color: var(--mud-palette-action-default-hover);
-}
-
-.mud-navmenu.mud-navmenu-default .mud-nav-link-expand-icon.mud-transform {
+    }
+    .mud-navmenu.mud-navmenu-default .mud-nav-link-expand-icon.mud-transform {
     fill: white;
-}
-
-.mud-navmenu.mud-navmenu-default .mud-nav-link.active:not(.mud-nav-link-disabled) {
+    }
+    .mud-navmenu.mud-navmenu-default .mud-nav-link.active:not(.mud-nav-link-disabled) {
     color: white;
-    background-color: var(--mud-palette-action-default-hover);
-}
-
-.mud-appbar {
+    background-color: #3c343a; 
+    border:1px solid #fa6602;
+    }
+    .mud-appbar {
     width: 100%;
     display: flex;
     z-index: var(--mud-zindex-appbar);
@@ -36,26 +30,23 @@ body{
     color: var(--mud-palette-appbar-text);
     background-color: #252836;
     transition: margin 225ms cubic-bezier(0,0,.2,1) 0ms,width 225ms cubic-bezier(0,0,.2,1) 0ms;
-}
-
-.mud-button-filled.mud-button-filled-warning {
+    }
+    .mud-button-filled.mud-button-filled-warning {
     color: var(--mud-palette-warning-text);
     background-color: #fa6602;
-}
-
-.mud-avatar-filled.mud-avatar-filled-warning {
+    }
+    .mud-avatar-filled.mud-avatar-filled-warning {
     background-color: #fa6602;
-}
-
-.mud-avatar-outlined.mud-avatar-outlined-warning {
+    }
+    .mud-avatar-outlined.mud-avatar-outlined-warning {
     color: #fa6602;
-    border: 2px solid #fa6602;
-}
-
-.mud-paper {
-
+    border: 1px solid #fa6602;
+    }
+    .mud-paper {
     border-radius: 5px;
-
-}
-
-
+    }
+    .mud-overlay .mud-overlay-scrim.mud-overlay-dark {
+    border-color: #fa6602;
+    background-color: #fa6602;
+    opacity: 0.1;
+    }
