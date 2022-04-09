@@ -18,6 +18,7 @@ body{
     color: white;
     background-color: #3c343a; 
     border:1px solid #fa6602;
+    border-radius: 5px;
     }
     .mud-appbar {
     width: 100%;

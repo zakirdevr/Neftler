@@ -7,22 +7,21 @@
       <MudSpacer />
       <MudIconButton Icon="@RightIcon" Color="Color.Inherit" />
    </MudAppBar>
-   <MudDrawer Style="@DrawerBgColor" @bind-Open="@open" Width="343px" ClipMode="clipMode" Elevation="1" Variant="@DrawerVariant.Responsive">
-      <MudDrawerHeader Class="mt-5">
-         <MudGrid Spacing="@spacing"  Justify="Justify.SpaceBetween">
-            <MudItem >
-            </MudItem>
-            <MudItem >
+   <MudDrawer Style="@DrawerBgColor" Class="d-flex flex-column flex-grow-1 gap-4" @bind-Open="@open" Width="343px" ClipMode="clipMode" Elevation="1" Variant="@DrawerVariant.Responsive">
+      <MudContainer Class="mt-5 mb-3">
+         <MudPaper Style="@InheritColor" class="d-flex flex-grow-1 gap-4">
+            <MudPaper Width="64px" Elevation="0" Style="@InheritColor"/>
+            <MudPaper Class="flex-grow-1 text-center" Style="@InheritColor" Width="64px" Elevation="0">
                <MudText Typo="Typo.h6">My App</MudText>
-            </MudItem>
-            <MudItem >
+            </MudPaper>
+            <MudPaper Class="text-end" Style="@InheritColor" Width="64px" Elevation="0">
                <MudAvatar Square="true" Style="@CloseIconStyle" @onclick="@ToggleDrawer">
                   <MudIcon Icon="@Icons.Filled.Close"  />
                </MudAvatar>
-            </MudItem>
-         </MudGrid>
-      </MudDrawerHeader>
-      <MudNavMenu>
+            </MudPaper>
+         </MudPaper>
+      </MudContainer>
+      <MudNavMenu Class="flex-grow-1" >
          @* Search box Start *@
          <MudContainer Class="mt-2">
             <MudTextField Style="@SearchBox"  @bind-Value="Search" Placeholder="Search" Variant="Variant.Outlined" 
@@ -116,10 +115,10 @@
                </MudPaper>
             </MudContainer>
          </MudList>
-         <MudContainer Class="ml-3" Style="@ButtonStyle">
-            <MudButton Variant="Variant.Filled" Color="Color.Warning" FullWidth="true">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></MudButton>
-         </MudContainer>
       </MudNavMenu>
+      <MudContainer Class="mb-4 mt-4" Style="@ButtonStyle">
+         <MudButton Variant="Variant.Filled" Color="Color.Warning" FullWidth="true">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></MudButton>
+      </MudContainer>
    </MudDrawer>
    <MudMainContent Class="pt-16 px-16">
    </MudMainContent>

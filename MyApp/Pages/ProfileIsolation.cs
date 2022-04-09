@@ -9,7 +9,6 @@ namespace MyApp.Pages
     public const string TextAlign="margin-left: -40px;";
     public const string ItemContainer="margin-top:-20px;";
     public const string PaperStyle="background-color:#2D303E;color:white;";
-
      public const string PaperRightIconStyle="color:white;font-size:11px;";
      public const string LinkAvatarStyle="position:absolute;right:2px; top:2px;";
     public const string BottomContainer="position:fixed; bottom:0; left:auto; right:0; border-radius:20px 20px 0px 0px; background-color:#252836";
