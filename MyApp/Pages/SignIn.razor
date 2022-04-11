@@ -53,20 +53,20 @@ public string Password { get; set;} = "";
 public string RightAdornment{get;set;}="";
 bool isShow;
 InputType EmailInput=InputType.Email;
-InputType PasswordInput = InputType.Password;
-string PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+InputType PasswordInput = InputType.Text;
+string PasswordInputIcon = Icons.Material.Filled.Visibility;
 void ButtonTestclick()
 {
 @if (isShow)
 {
 isShow = false;
-PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
-PasswordInput = InputType.Password;
+PasswordInputIcon = Icons.Material.Filled.Visibility;
+PasswordInput = InputType.Text;
 }
 else {
 isShow = true;
-PasswordInputIcon = Icons.Material.Filled.Visibility;
-PasswordInput = InputType.Text;
+PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+PasswordInput = InputType.Password; 
 }
 }
 }
