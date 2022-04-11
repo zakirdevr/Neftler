@@ -1,9 +1,17 @@
-body{
+html,body{
     background-color: #1F1D2B !important;
+    max-width: 100%;
+    overflow-x: hidden;
     }
     .mud-input.mud-input-outlined:focus-within .mud-input-outlined-border {
     border-color: white;    
     }
+
+    .mud-input.mud-input-outlined .mud-input-outlined-border {
+        border-color: #2D303E;
+        border: 1px solid #2D303E;
+        }
+
     .mud-icon-root.mud-svg-icon {
     fill: #D3D3D3;
     }
@@ -50,4 +58,29 @@ body{
     border-color: #fa6602;
     background-color: #fa6602;
     opacity: 0.1;
+    }
+
+    .mud-input>input.mud-input-root-outlined.mud-input-root-adorned-start, div.mud-input-slot.mud-input-root-outlined.mud-input-root-adorned-start {
+        padding-left: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 60px;
+    }
+
+    .mud-primary-text {
+        color: white !important;
+    }
+
+    .mud-button {
+        padding: 6px 16px;
+        font-family: var(--mud-typography-button-family);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: var(--mud-typography-button-lineheight);
+        letter-spacing: var(--mud-typography-button-letterspacing);
+        text-transform:capitalize;
+        min-width: 64px;
+        box-sizing: border-box;
+        transition: background-color 250ms cubic-bezier(.4,0,.2,1) 0ms,box-shadow 250ms cubic-bezier(.4,0,.2,1) 0ms,border 250ms cubic-bezier(.4,0,.2,1) 0ms;
+        border-radius: var(--mud-default-borderradius);
+        color: var(--mud-palette-text-primary);
     }

@@ -1,5 +1,8 @@
 @page "/"
 @using static MyApp.Pages.ProfileIsolation
+    <div class="sidebar">
+        <NavMenu />
+    </div>
 <MudContainer >
    <MudGrid >
       <MudItem xs="12">
@@ -16,7 +19,7 @@
       </MudItem>
    </MudGrid>
 </MudContainer>
-<MudNavMenu>
+<MudNavMenu Class="px-1">
    @* Item 1 *@
    <MudContainer  Class="mt-4">
       <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle" Height="45px;">
@@ -31,7 +34,7 @@
    @* Item 2 *@
    <MudContainer  Class="mt-4">
       <MudPaper Class="d-flex flex-grow-1 gap-4" Style="@PaperStyle" Height="45px;">
-         <MudNavLink  Match="NavLinkMatch.All" Href="/##" Icon="@Icons.Filled.Person" >
+         <MudNavLink  Match="NavLinkMatch.All" Href="/signup" Icon="@Icons.Filled.Person" >
             Personal
             <MudAvatar Class="mt-2 mr-3" Size="Size.Small" Style="@LinkAvatarStyle" Variant="Variant.Outlined" Color="Color.Warning">
                <MudText Typo="Typo.button" Style="@ProfileIconStyle"><i class="fa-solid fa-angle-right"></i></MudText>
@@ -95,4 +98,5 @@
    </MudPaper>
 </MudPaper>
 @code{
+
 }

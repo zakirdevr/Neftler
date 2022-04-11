@@ -3,7 +3,7 @@ namespace MyApp.Shared
     public class NavMenuIsolation
     {
         
-     public  const string DrawerBgColor ="background-color:#1F1D2B; color:white; overflow-x: hidden; overflow-y: auto;";
+     public  const string DrawerStyle ="background-color:#1F1D2B; color:white; overflow-x: hidden; overflow-y: auto;";
      public  const string PaperStyle="background-color:#2D303E;color:white;";
      public const string InheritColor="background-color:#1F1D2B; color:white;";
      public const string CloseIconStyle="background-color:#2D303E;color:white; border-radius:7px; cursor:pointer;";
@@ -15,7 +15,7 @@ namespace MyApp.Shared
      public const string LinkAvatarStyle="position:absolute;right:2px; top:2px;";
      public  const string ListContainer="width:98%;";
      public  const string ButtonStyle="";
-     public  const string SearchBox="height:42px; color:white;";
+     public  const string SearchBox="height:42px; color:white; background-color:#2D303E; border-radius:7px;";
      public const string PaperRightIconStyle="color:white;font-size:11px;";
 
    

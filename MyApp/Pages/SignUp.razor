@@ -1,0 +1,80 @@
+@page "/signup"
+@using static MyApp.Pages.SignUpIsolation
+
+<MudContainer Class="px-2">
+   <MudContainer Class="text-center" Style="@ImageContainer">
+   <MudImage Src="images/signup.png" Height="220"  Alt="Sign Up" Class="ma-4"/>
+</MudContainer>
+<MudPaper Elevation="0" Style="@SignupTextPaper">
+   <MudContainer Class="mt-6">
+      <MudText Style="@SignupText" Typo="Typo.h6">Sign Up</MudText>
+   </MudContainer>
+   <MudContainer Class="mt-7">
+      <MudTextField
+         @bind-Value="Email" Placeholder="Email" Variant="Variant.Outlined" 
+         Style="@EmailFieldStyle"
+         InputType="@EmailInput" Adornment="Adornment.Start"
+         AdornmentIcon="@Icons.Outlined.Email"
+         AdornmentAriaLabel="Show Email"/>
+   </MudContainer>
+   <MudContainer Class="mt-4">
+      <MudTextField  
+         @bind-Value="RightAdornment" Variant="Variant.Outlined" 
+         Adornment="Adornment.Start"
+         AdornmentIcon="@Icons.Filled.Shield"  
+         Style="@RightAdornmentStyle"
+         />
+      <MudTextField
+         @bind-Value="Password" Placeholder="Password" Variant="Variant.Outlined" 
+         Style="@PasswordFieldStyle"
+         InputType="@PasswordInput" Adornment="Adornment.End"
+         AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="ButtonTestclick"
+         AdornmentAriaLabel="Show Password"/>
+   </MudContainer>
+   <MudContainer Class="mt-3">
+      <MudTextField
+         @bind-Value="ConfirmPassword" Placeholder="Confirm Password"  Variant="Variant.Outlined" 
+         Style="@ConfirmPasswordStyle"
+         InputType="InputType.Password"
+         Adornment="Adornment.Start"
+         AdornmentIcon="@Icons.Filled.Shield"
+         AdornmentAriaLabel="Show Email"/>
+   </MudContainer>
+</MudPaper>
+<MudPaper Elevation="0" Style="@SignupTextPaper">
+    <MudContainer Class="mt-5 mb-6">
+   <MudButton Variant="Variant.Filled" Style="@SignUpButtonStyle" Color="Color.Warning" FullWidth="true">Sign Up</MudButton>
+</MudContainer>
+</MudPaper>
+<MudContainer Class="mt-4">
+   <MudText Style="@AlreadyTextStyle">
+      Already have an account?
+      <MudLink Href="/signin"> Sign in</MudLink>
+   </MudText>
+</MudContainer>
+</MudContainer>
+
+@code{
+public string Email {get;set;}="";
+public string Password { get; set;} = "";
+public string ConfirmPassword { get; set;} = "";
+public string RightAdornment{get;set;}="";
+bool isShow;
+InputType EmailInput=InputType.Email;
+InputType PasswordInput = InputType.Text;
+string PasswordInputIcon = Icons.Material.Filled.Visibility;
+void ButtonTestclick()
+{
+@if (isShow)
+{
+isShow = false;
+PasswordInputIcon = Icons.Material.Filled.Visibility;
+PasswordInput = InputType.Text;
+}
+else {
+isShow = true;
+PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+PasswordInput = InputType.Password; 
+}
+}
+}

@@ -1,0 +1,72 @@
+@page "/signin"
+@using static MyApp.Pages.SignUpIsolation
+<MudContainer Class="px-2">
+   <MudContainer Class="text-center" Style="@ImageContainer">
+   <MudImage Src="images/signup.png" Height="220"  Alt="Sign Up" Class="ma-4"/>
+</MudContainer>
+<MudPaper Elevation="0" Style="@SignupTextPaper">
+   <MudContainer Class="mt-6">
+      <MudText Style="@SignupText" Typo="Typo.h6">Sign In</MudText>
+   </MudContainer>
+   <MudContainer Class="mt-7">
+      <MudTextField
+         @bind-Value="Email" Placeholder="Email" Variant="Variant.Outlined" 
+         Style="@EmailFieldStyle"
+         InputType="@EmailInput" Adornment="Adornment.Start"
+         AdornmentIcon="@Icons.Outlined.Email"
+         AdornmentAriaLabel="Show Email"/>
+   </MudContainer>
+   <MudContainer Class="mt-4">
+      <MudTextField  
+         @bind-Value="RightAdornment" Variant="Variant.Outlined" 
+         Adornment="Adornment.Start"
+         AdornmentIcon="@Icons.Filled.Shield"  
+         Style="@RightAdornmentStyle"
+         />
+      <MudTextField
+         @bind-Value="Password" Placeholder="Password" Variant="Variant.Outlined" 
+         Style="@PasswordFieldStyle"
+         InputType="@PasswordInput" Adornment="Adornment.End"
+         AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="ButtonTestclick"
+         AdornmentAriaLabel="Show Password"/>
+         <MudContainer Class="text-end pr-0">
+         <MudLink Style="@ForgotPasswordStyle" Href="/password-reset">Forgot password?</MudLink>
+   </MudContainer>
+   </MudContainer>
+</MudPaper>
+<MudPaper Elevation="0" Style="@SignupTextPaper">
+    <MudContainer Class="mt-6 mb-6">
+   <MudButton Href="/password-reset" Variant="Variant.Filled" Style="@SignUpButtonStyle" Color="Color.Warning" FullWidth="true">Sign In</MudButton>
+</MudContainer>
+</MudPaper>
+<MudContainer Class="mt-4">
+   <MudText Style="@AlreadyTextStyle">
+      Don’t have an account?
+      <MudLink Href="/signup"> Sign Up</MudLink>
+   </MudText>
+</MudContainer>
+</MudContainer>
+@code{
+public string Email {get;set;}="";
+public string Password { get; set;} = "";
+
+public string RightAdornment{get;set;}="";
+bool isShow;
+InputType EmailInput=InputType.Email;
+InputType PasswordInput = InputType.Password;
+string PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+void ButtonTestclick()
+{
+@if (isShow)
+{
+isShow = false;
+PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+PasswordInput = InputType.Password;
+}
+else {
+isShow = true;
+PasswordInputIcon = Icons.Material.Filled.Visibility;
+PasswordInput = InputType.Text;
+}
+}
+}

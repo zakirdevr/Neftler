@@ -1,15 +1,16 @@
 ﻿@using static MyApp.Shared.NavMenuIsolation
 <MudLayout>
    <MudAppBar Elevation="1" Dense="@dense">
-      <MudIconButton Icon="@LeftIcon" Color="Color.Inherit" Edge="Edge.Start" OnClick="@ToggleDrawer" />
+      <MudIconButton Icon="@LeftIcon" Color="Color.Inherit" Edge="Edge.Start" 
+      OnClick="@ToggleDrawer" />
       <MudSpacer />
       <MudText Typo="Typo.h5">@Title</MudText>
       <MudSpacer />
       <MudIconButton Icon="@RightIcon" Color="Color.Inherit" />
    </MudAppBar>
-   <MudDrawer Style="@DrawerBgColor" Class="d-flex flex-column flex-grow-1 gap-4" @bind-Open="@open" Width="343px" ClipMode="clipMode" Elevation="1" Variant="@DrawerVariant.Responsive">
+   <MudDrawer Style="@DrawerStyle" Class="d-flex flex-column flex-grow-1 gap-4" @bind-Open="@open" Width="343px" ClipMode="clipMode" Elevation="1" Variant="@DrawerVariant.Responsive">
       <MudContainer Class="mt-5 mb-3">
-         <MudPaper Style="@InheritColor" class="d-flex flex-grow-1 gap-4">
+         <MudPaper Style="@InheritColor" Elevation="0" class="d-flex flex-grow-1 gap-4">
             <MudPaper Width="64px" Elevation="0" Style="@InheritColor"/>
             <MudPaper Class="flex-grow-1 text-center" Style="@InheritColor" Width="64px" Elevation="0">
                <MudText Typo="Typo.h6">My App</MudText>
@@ -124,8 +125,11 @@
    </MudMainContent>
 </MudLayout>
 @code{
+[Parameter]
 public string  Title {get;set;}="My Profile"; //Will Be Dynamic
+[Parameter]
 public string  LeftIcon {get;set;}=Icons.Filled.Menu; //Will Be Dynamic
+[Parameter]
 public string  RightIcon {get;set;}=Icons.Filled.Settings; //Will Be Dynamic
 bool open = true;
 bool dense = false;
